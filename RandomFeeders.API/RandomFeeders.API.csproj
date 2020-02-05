@@ -4,5 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RandomFeeders.Security\RandomFeeders.Security.csproj" />
+  </ItemGroup>
+
 
 </Project>
