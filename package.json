@@ -1,0 +1,22 @@
+{
+  "name": "randomfeeders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielpda15/RandomFeeders.git"
+  },
+  "author": "gabrielpda15",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielpda15/RandomFeeders/issues"
+  },
+  "homepage": "https://github.com/gabrielpda15/RandomFeeders#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
