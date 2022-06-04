@@ -5,8 +5,9 @@ const https = require('https');
 
 const app = express();
 
+const rootPath = path.resolve(__dirname, 'ngRandomFeeders');
 const port = process.env.PORT || 8080;
-const sslPath = process.env.SSL_PATH || __dirname;
+const sslPath = '/etc/letsencrypt';
 
 const privateKey = fs.readFileSync(path.resolve(sslPath, 'privkey.pem'), 'utf8');
 const certificate = fs.readFileSync(path.resolve(sslPath, 'cert.pem'), 'utf8');
@@ -20,10 +21,10 @@ const credentials = {
 
 const httpsServer = https.createServer(credentials, app);
 
-app.use(express.static(`${__dirname}/ngRandomFeeders`, { dotfiles: 'allow' }));
+app.use(express.static(rootPath, { dotfiles: 'allow' }));
 
 app.get('/*', (req, res) => {
-  res.sendFile(path.resolve(`${__dirname}/ngRandomFeeders/index.html`));
+  res.sendFile(path.resolve(rootPath, 'index.html'));
 });
 
 httpsServer.listen(port, () => {
