@@ -5,7 +5,7 @@ const https = require('https');
 
 const app = express();
 
-const rootPath = path.resolve(__dirname, 'ngRandomFeeders');
+const rootPath = path.resolve(__dirname, 'public');
 const port = process.env.PORT || 8080;
 const sslPath = '/etc/letsencrypt';
 
