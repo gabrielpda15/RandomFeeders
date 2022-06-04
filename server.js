@@ -6,8 +6,8 @@ const https = require('https');
 const app = express();
 
 const rootPath = path.resolve(__dirname, 'public');
+const sslPath = path.resolve(__dirname, 'certificate');
 const port = process.env.PORT || 8080;
-const sslPath = '/etc/letsencrypt';
 
 const privateKey = fs.readFileSync(path.resolve(sslPath, 'privkey.pem'), 'utf8');
 const certificate = fs.readFileSync(path.resolve(sslPath, 'cert.pem'), 'utf8');
