@@ -2,3 +2,5 @@ node_modules/
 
 certificate/*
 !certificate/.gitkeep
+
+docker.cid
