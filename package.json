@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "docker-build": "docker build . -t ng-random-feeders"
   },
   "repository": {
     "type": "git",
