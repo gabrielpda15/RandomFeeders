@@ -15,7 +15,7 @@ RUN npm ci --only=production
 # Bundle app source
 COPY . .
 
-ENV PORT=443
+EXPOSE 80
 EXPOSE 443
 
 CMD [ "npm", "start" ]
